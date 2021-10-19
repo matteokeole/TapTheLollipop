@@ -19,17 +19,18 @@ const colors = [
 	"9e9e9e",
 	"607d8b"
 ],
-color = function() {return `#${colors[Math.floor(colors.length * Math.random())]}`},
+color = function() {return `#${colors[Math.floor(colors.length * Math.random())]}`}, // Return a random color from the color list
 lollipop = document.querySelector(".lollipop"),
 overlay = document.querySelector(".overlay");
 let random = color();
 
-// showing the stick & the lollipop
+// Show stick and lollipop
 document.querySelector(".stick").style.bottom = 0;
 lollipop.style.bottom = 0;
 lollipop.style.backgroundColor = random;
 overlay.style.backgroundColor = random;
 lollipop.addEventListener("click", function() {
+	// Click event
 	random = color();
 	this.style.backgroundColor = random;
 	overlay.style.backgroundColor = random
